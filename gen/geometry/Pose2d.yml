@@ -30,6 +30,7 @@ classes:
       Y:
       operator+:
       operator+=:
+        ignore: true  # make immutable
       operator-:
       operator==:
       operator!=:

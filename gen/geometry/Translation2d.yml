@@ -23,17 +23,21 @@ classes:
       RotateBy:
       operator+:
       operator+=:
+        ignore: true  # make immutable
       operator-:
         overloads:
           frc::Translation2d& [const]:
           '[const]':
       operator-=:
+        ignore: true  # make immutable
       operator*:
       operator*=:
+        ignore: true  # make immutable
       operator/:
       operator==:
       operator!=:
       operator/=:
+        ignore: true  # make immutable
 
 inline_code: |
   cls_Translation2d

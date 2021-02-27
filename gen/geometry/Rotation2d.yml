@@ -26,11 +26,13 @@ classes:
       Tan:
       operator+:
       operator+=:
+        ignore: true  # make immutable
       operator-:
         overloads:
           frc::Rotation2d& [const]:
           '[const]':
       operator-=:
+        ignore: true  # make immutable
       operator*:
       operator==:
       operator!=:
