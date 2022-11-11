@@ -9,7 +9,7 @@ on:
 
 jobs:
   ci:
-    uses: robotpy/build-actions/.github/workflows/package-ci.yml@v2023
+    uses: robotpy/build-actions/.github/workflows/package-ci.yml@pftest
     secrets:
       SSH_USER: ${{ secrets.SSH_USER }}
       SSH_KEY: ${{ secrets.SSH_KEY }}
