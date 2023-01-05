@@ -1,4 +1,4 @@
-from .units.Units import (
+from .units import (
     degreesToRadians,
     degreesToRotations,
     feetToMeters,
@@ -10,7 +10,7 @@ from .units.Units import (
     millisecondsToSeconds,
     radiansPerSecondToRotationsPerMinute,
     radiansToDegrees,
-   	radiansToRotation,
+   	radiansToRotations,
    	rotationsPerMinuteToRadiansPerSecond,
     rotationsToDegrees,
     rotationsToRadians,
