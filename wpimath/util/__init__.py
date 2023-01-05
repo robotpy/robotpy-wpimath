@@ -10,9 +10,9 @@ from .units import (
     millisecondsToSeconds,
     radiansPerSecondToRotationsPerMinute,
     radiansToDegrees,
-   	radiansToRotations,
-   	rotationsPerMinuteToRadiansPerSecond,
+    radiansToRotations,
+    rotationsPerMinuteToRadiansPerSecond,
     rotationsToDegrees,
     rotationsToRadians,
-   	secondsToMilliseconds
+    secondsToMilliseconds,
 )
