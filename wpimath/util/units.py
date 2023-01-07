@@ -121,14 +121,14 @@ def rotationsPerMinuteToRadiansPerSecond(rpm: float) -> float:
     return rpm * pi / (kSecondsPerMinute / 2)
 
 
-def radiansPerSecondToRotationsPerMinute(radians_per_second: float) -> float:
+def radiansPerSecondToRotationsPerMinute(radiansPerSecond: float) -> float:
     """Converts radians per second to rotations per minute.
 
     :param radiansPerSecond: The radians per second to convert to from rotations per minute.
 
     :returns: Rotations per minute converted from radians per second.
     """
-    return radians_per_second * (kSecondsPerMinute / 2) / pi
+    return radiansPerSecond * (kSecondsPerMinute / 2) / pi
 
 
 def millisecondsToSeconds(milliseconds: float) -> float:
