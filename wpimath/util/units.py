@@ -11,12 +11,6 @@ kMillisecondsPerSecond = 1000
 kKilogramsPerLb = 0.453592
 
 
-# Utility class, so constructor is private.
-def __init__(self) -> None:
-    raise NotImplementedError("This is a utility class, so the constructor is private.")
-
-
-@staticmethod
 def metersToFeet(meters: float) -> float:
     """Converts given meters to feet.
 
@@ -27,7 +21,6 @@ def metersToFeet(meters: float) -> float:
     return metersToInches(meters) / kInchesPerFoot
 
 
-@staticmethod
 def feetToMeters(feet: float) -> float:
     """Converts given feet to meters.
 
@@ -38,7 +31,6 @@ def feetToMeters(feet: float) -> float:
     return inchesToMeters(feet * kInchesPerFoot)
 
 
-@staticmethod
 def metersToInches(meters: float) -> float:
     """Converts given meters to inches.
 
@@ -49,7 +41,6 @@ def metersToInches(meters: float) -> float:
     return meters / kMetersPerInch
 
 
-@staticmethod
 def inchesToMeters(inches: float) -> float:
     """Converts given inches to meters.
 
@@ -60,7 +51,6 @@ def inchesToMeters(inches: float) -> float:
     return inches * kMetersPerInch
 
 
-@staticmethod
 def degreesToRadians(degrees: float) -> float:
     """Converts given degrees to radians.
 
@@ -71,7 +61,6 @@ def degreesToRadians(degrees: float) -> float:
     return radians(degrees)
 
 
-@staticmethod
 def radiansToDegrees(radians: float) -> float:
     """Converts given radians to degrees.
 
@@ -82,7 +71,6 @@ def radiansToDegrees(radians: float) -> float:
     return degrees(radians)
 
 
-@staticmethod
 def radiansToRotations(radians: float) -> float:
     """Converts given radians to rotations.
 
@@ -93,7 +81,6 @@ def radiansToRotations(radians: float) -> float:
     return radians / (pi * 2)
 
 
-@staticmethod
 def degreesToRotations(degrees: float) -> float:
     """Converts given degrees to rotations.
 
@@ -104,7 +91,6 @@ def degreesToRotations(degrees: float) -> float:
     return degrees / 360
 
 
-@staticmethod
 def rotationsToDegrees(rotations: float) -> float:
     """Converts given rotations to degrees.
 
@@ -115,7 +101,6 @@ def rotationsToDegrees(rotations: float) -> float:
     return rotations * 360
 
 
-@staticmethod
 def rotationsToRadians(rotations: float) -> float:
     """Converts given rotations to radians.
 
@@ -126,7 +111,6 @@ def rotationsToRadians(rotations: float) -> float:
     return rotations * 2 * pi
 
 
-@staticmethod
 def rotationsPerMinuteToRadiansPerSecond(rpm: float) -> float:
     """Converts rotations per minute to radians per second.
 
@@ -137,7 +121,6 @@ def rotationsPerMinuteToRadiansPerSecond(rpm: float) -> float:
     return rpm * pi / (kSecondsPerMinute / 2)
 
 
-@staticmethod
 def radiansPerSecondToRotationsPerMinute(radians_per_second: float) -> float:
     """Converts radians per second to rotations per minute.
 
@@ -148,7 +131,6 @@ def radiansPerSecondToRotationsPerMinute(radians_per_second: float) -> float:
     return radians_per_second * (kSecondsPerMinute / 2) / pi
 
 
-@staticmethod
 def millisecondsToSeconds(milliseconds: float) -> float:
     """Converts given milliseconds to seconds.
 
@@ -159,7 +141,6 @@ def millisecondsToSeconds(milliseconds: float) -> float:
     return milliseconds / kMillisecondsPerSecond
 
 
-@staticmethod
 def secondsToMilliseconds(seconds: float) -> float:
     """Converts given seconds to milliseconds.
 
@@ -170,7 +151,6 @@ def secondsToMilliseconds(seconds: float) -> float:
     return seconds * kMillisecondsPerSecond
 
 
-@staticmethod
 def kilogramsToLbs(kilograms: float) -> float:
     """Converts kilograms into lbs (pound-mass).
 
@@ -181,7 +161,6 @@ def kilogramsToLbs(kilograms: float) -> float:
     return kilograms / kKilogramsPerLb
 
 
-@staticmethod
 def lbsToKilograms(lbs: float) -> float:
     """Converts lbs (pound-mass) into kilograms.
 
