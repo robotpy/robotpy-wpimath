@@ -2,7 +2,7 @@
 # Open Source Software; you can modify and/or share it under the terms of
 # the WPILib BSD license file in the root directory of this project.
 
-from math import degrees, radians, pi
+from math import degrees, radians, pi, tau
 
 kInchesPerFoot = 12.0
 kMetersPerInch = 0.0254
@@ -78,7 +78,7 @@ def radiansToRotations(radians: float) -> float:
 
     :returns: rotations Converted from radians.
     """
-    return radians / (pi * 2)
+    return radians / tau
 
 
 def degreesToRotations(degrees: float) -> float:
@@ -108,7 +108,7 @@ def rotationsToRadians(rotations: float) -> float:
 
     :returns: radians Converted from rotations.
     """
-    return rotations * 2 * pi
+    return rotations * tau
 
 
 def rotationsPerMinuteToRadiansPerSecond(rpm: float) -> float:
@@ -118,7 +118,7 @@ def rotationsPerMinuteToRadiansPerSecond(rpm: float) -> float:
 
     :returns: Radians per second converted from rotations per minute.
     """
-    return rpm * pi / (kSecondsPerMinute / 2)
+    return (rpm * tau) / kSecondsPerMinute
 
 
 def radiansPerSecondToRotationsPerMinute(radiansPerSecond: float) -> float:
@@ -128,7 +128,7 @@ def radiansPerSecondToRotationsPerMinute(radiansPerSecond: float) -> float:
 
     :returns: Rotations per minute converted from radians per second.
     """
-    return radiansPerSecond * (kSecondsPerMinute / 2) / pi
+    return radiansPerSecond * (kSecondsPerMinute / tau)
 
 
 def millisecondsToSeconds(milliseconds: float) -> float:
