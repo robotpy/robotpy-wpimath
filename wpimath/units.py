@@ -2,7 +2,7 @@
 # Open Source Software; you can modify and/or share it under the terms of
 # the WPILib BSD license file in the root directory of this project.
 
-from math import degrees, radians, pi, tau
+import math
 
 kInchesPerFoot = 12.0
 kMetersPerInch = 0.0254
@@ -51,25 +51,11 @@ def inchesToMeters(inches: float) -> float:
     return inches * kMetersPerInch
 
 
-def degreesToRadians(degrees: float) -> float:
-    """Converts given degrees to radians.
+# Converts given degrees to radians.
+degreesToRadians = math.radians
 
-    :param degrees: The degrees to convert to radians.
-
-    :returns: Radians converted from degrees.
-    """
-    return radians(degrees)
-
-
-def radiansToDegrees(radians: float) -> float:
-    """Converts given radians to degrees.
-
-    :param radians: The radians to convert to degrees.
-
-    :returns: Degrees converted from radians.
-    """
-    return degrees(radians)
-
+# Converts given radians to degrees.
+radiansToDegrees = math.degrees
 
 def radiansToRotations(radians: float) -> float:
     """Converts given radians to rotations.
@@ -78,7 +64,7 @@ def radiansToRotations(radians: float) -> float:
 
     :returns: rotations Converted from radians.
     """
-    return radians / tau
+    return radians / math.tau
 
 
 def degreesToRotations(degrees: float) -> float:
@@ -108,7 +94,7 @@ def rotationsToRadians(rotations: float) -> float:
 
     :returns: radians Converted from rotations.
     """
-    return rotations * tau
+    return rotations * math.tau
 
 
 def rotationsPerMinuteToRadiansPerSecond(rpm: float) -> float:
@@ -118,7 +104,7 @@ def rotationsPerMinuteToRadiansPerSecond(rpm: float) -> float:
 
     :returns: Radians per second converted from rotations per minute.
     """
-    return (rpm * tau) / kSecondsPerMinute
+    return (rpm / kSecondsPerMinute) * math.tau
 
 
 def radiansPerSecondToRotationsPerMinute(radiansPerSecond: float) -> float:
@@ -128,7 +114,7 @@ def radiansPerSecondToRotationsPerMinute(radiansPerSecond: float) -> float:
 
     :returns: Rotations per minute converted from radians per second.
     """
-    return radiansPerSecond * (kSecondsPerMinute / tau)
+    return radiansPerSecond * (kSecondsPerMinute / 2) / math.pi
 
 
 def millisecondsToSeconds(milliseconds: float) -> float:
