@@ -115,7 +115,7 @@ def radiansPerSecondToRotationsPerMinute(radiansPerSecond: float) -> float:
 
     :returns: Rotations per minute converted from radians per second.
     """
-    return radiansPerSecond * (kSecondsPerMinute / 2) / math.pi
+    return (radiansPerSecond * kSecondsPerMinute) / math.tau
 
 
 def millisecondsToSeconds(milliseconds: float) -> float:
