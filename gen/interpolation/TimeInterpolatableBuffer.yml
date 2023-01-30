@@ -25,3 +25,7 @@ templates:
     qualname: frc::TimeInterpolatableBuffer
     params:
       - double
+  TimeInterpolatableBuffer:
+    qualname: frc::TimeInterpolatableBuffer
+    params:
+      - py::object
