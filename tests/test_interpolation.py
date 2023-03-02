@@ -1,4 +1,7 @@
 import math
+from typing import Iterable
+
+from hypothesis import given, strategies as st
 
 from wpimath.geometry import Pose2d, Rotation2d
 from wpimath.interpolation import (
@@ -21,6 +24,22 @@ def test_float():
 
     buffer.addSample(10.5, 2)
     assert buffer.sample(0) == 1
+
+
+@given(
+    st.builds(TimeInterpolatableFloatBuffer, st.floats(1, 10)),
+    st.iterables(
+        st.tuples(st.booleans(), st.floats(0, 100))
+    ),
+)
+def test_float_arbitrary(
+    buffer: TimeInterpolatableFloatBuffer, instructions: Iterable[tuple[bool, float]]
+):
+    for should_add, time_s in instructions:
+        if should_add:
+            buffer.addSample(time_s, 0)
+        else:
+            buffer.sample(time_s)
 
 
 def test_rotation2d():
