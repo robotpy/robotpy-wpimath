@@ -63,3 +63,9 @@ templates:
     params:
     - 2
     - 2
+  LinearQuadraticRegulator_3_2:
+    qualname: frc::LinearQuadraticRegulator
+    subpackage: controller
+    params:
+    - 3
+    - 2
